@@ -1,0 +1,17 @@
+pattern: riscv_llm_alu_raw_stream
+entry_class: riscv_llm_alu_raw_stream
+approved_roots:
+  - riscv_instr_stream
+  - riscv_rand_instr_stream
+  - riscv_directed_instr_stream
+  - riscv_mem_access_stream
+classes:
+  - name: riscv_llm_alu_raw_stream
+    module: pygen_src.llm_patterns.riscv_llm_alu_raw_stream
+    role: concrete_stream
+    extends: riscv_directed_instr_stream
+    responsibilities:
+      - select non-reserved integer registers
+      - emit randomized ALU instructions
+      - constrain each instruction rs1 to the preceding rd
+    register: true

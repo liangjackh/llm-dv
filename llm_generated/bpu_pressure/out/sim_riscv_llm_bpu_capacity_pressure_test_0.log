@@ -1,0 +1,269 @@
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering LB
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering LH
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering LW
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering LBU
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering LHU
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering SB
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering SH
+2026-08-07 15:41:12,622 riscv_instr.py 119 INFO Registering SW
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLL
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLLI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SRL
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SRLI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SRA
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SRAI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering ADD
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering ADDI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering NOP
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SUB
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering LUI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering AUIPC
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering XOR
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering XORI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering OR
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering ORI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering AND
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering ANDI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLT
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLTI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLTU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SLTIU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BEQ
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BNE
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BLT
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BGE
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BLTU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering BGEU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering JAL
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering JALR
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering FENCE
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering FENCE_I
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SFENCE_VMA
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering ECALL
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering EBREAK
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering URET
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering SRET
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering MRET
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering DRET
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering WFI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRW
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRS
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRC
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRWI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRSI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering CSRRCI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering MUL
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering MULH
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering MULHSU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering MULHU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering DIV
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering DIVU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering REM
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering REMU
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_LW
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SW
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_LWSP
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SWSP
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_ADDI4SPN
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_ADDI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_ADDI16SP
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_LI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_LUI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SUB
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_ADD
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_NOP
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_MV
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_ANDI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_XOR
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_OR
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_AND
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_BEQZ
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_BNEZ
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SRLI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SRAI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_SLLI
+2026-08-07 15:41:12,623 riscv_instr.py 119 INFO Registering C_J
+2026-08-07 15:41:12,624 riscv_instr.py 119 INFO Registering C_JAL
+2026-08-07 15:41:12,624 riscv_instr.py 119 INFO Registering C_JR
+2026-08-07 15:41:12,624 riscv_instr.py 119 INFO Registering C_JALR
+2026-08-07 15:41:12,624 riscv_instr.py 119 INFO Registering C_EBREAK
+2026-08-07 15:41:12,927 riscv_instr_gen_config.py 475 INFO min_stack_len_per_program value = 8
+2026-08-07 15:41:12,928 riscv_instr_base_test.py 78 INFO riscv_instr_gen_config is randomized
+2026-08-07 15:41:12,931 riscv_utils.py 76 INFO 
++-----+---------------------------------+---------------+--------+---------------------------------------------------------------------------+
+|     | Name                            | Type          |   Size | Value                                                                     |
+|-----+---------------------------------+---------------+--------+---------------------------------------------------------------------------|
+|   0 | tname                           | <class 'str'> |     46 | riscv_instr_gen_config                                                    |
+|   1 | main_program_instr_cnt          | <class 'str'> |     63 | 259                                                                       |
+|   2 | sub_program_instr_cnt           | <class 'str'> |     62 | []                                                                        |
+|   3 | debug_program_instr_cnt         | <class 'str'> |     64 | 0                                                                         |
+|   4 | debug_sub_program_instr_cnt     | <class 'str'> |     68 | []                                                                        |
+|   5 | data_page_pattern               | <class 'str'> |     58 | 0                                                                         |
+|   6 | vreg_init_method                | <class 'str'> |     57 | 1                                                                         |
+|   7 | max_directed_instr_stream_seq   | <class 'str'> |     70 | 20                                                                        |
+|   8 | m_mode_exception_delegation     | <class 'str'> |     68 | {}                                                                        |
+|   9 | s_mode_exception_delegation     | <class 'str'> |     68 | {}                                                                        |
+|  10 | m_mode_interrupt_delegation     | <class 'str'> |     68 | {}                                                                        |
+|  11 | s_mode_interrupt_delegation     | <class 'str'> |     68 | {}                                                                        |
+|  12 | init_privileged_mode            | <class 'str'> |     61 | 3                                                                         |
+|  13 | mstatus                         | <class 'str'> |     48 | 1618716196                                                                |
+|  14 | mie                             | <class 'str'> |     44 | 1161039355                                                                |
+|  15 | sstatus                         | <class 'str'> |     48 | 1439506743                                                                |
+|  16 | sie                             | <class 'str'> |     44 | 1060008732                                                                |
+|  17 | ustatus                         | <class 'str'> |     48 | 66767279                                                                  |
+|  18 | uie                             | <class 'str'> |     44 | 184393911                                                                 |
+|  19 | mstatus_mprv                    | <class 'str'> |     53 | 0                                                                         |
+|  20 | mstatus_mxr                     | <class 'str'> |     52 | 0                                                                         |
+|  21 | mstatus_sum                     | <class 'str'> |     52 | 0                                                                         |
+|  22 | mstatus_tvm                     | <class 'str'> |     52 | 0                                                                         |
+|  23 | mstatus_fs                      | <class 'str'> |     51 | 0                                                                         |
+|  24 | mstatus_vs                      | <class 'str'> |     51 | 0                                                                         |
+|  25 | mtvec_mode                      | <class 'str'> |     51 | 1                                                                         |
+|  26 | tvec_alignment                  | <class 'str'> |     55 | 4                                                                         |
+|  27 | fcsr_rm                         | <class 'str'> |     48 | 1                                                                         |
+|  28 | enable_sfence                   | <class 'str'> |     54 | 0                                                                         |
+|  29 | gpr                             | <class 'str'> |     44 | [4, 31, 13, 28]                                                           |
+|  30 | scratch_reg                     | <class 'str'> |     52 | 30                                                                        |
+|  31 | pmp_reg                         | <class 'str'> |     48 | 22                                                                        |
+|  32 | sp                              | <class 'str'> |     43 | 25                                                                        |
+|  33 | tp                              | <class 'str'> |     43 | 29                                                                        |
+|  34 | ra                              | <class 'str'> |     43 | 31                                                                        |
+|  35 | check_misa_init_val             | <class 'str'> |     60 | 0                                                                         |
+|  36 | check_xstatus                   | <class 'str'> |     54 | 1                                                                         |
+|  37 | virtual_addr_translation_on     | <class 'str'> |     68 | 0                                                                         |
+|  38 | stack_len                       | <class 'str'> |     50 | 5000                                                                      |
+|  39 | kernel_stack_len                | <class 'str'> |     57 | 4000                                                                      |
+|  40 | kernel_program_instr_cnt        | <class 'str'> |     65 | 400                                                                       |
+|  41 | invalid_priv_mode_csrs          | <class 'str'> |     63 | []                                                                        |
+|  42 | num_of_sub_program              | <class 'str'> |     59 | 0                                                                         |
+|  43 | instr_cnt                       | <class 'str'> |     50 | 500                                                                       |
+|  44 | num_of_tests                    | <class 'str'> |     53 | 1                                                                         |
+|  45 | no_data_page                    | <class 'str'> |     53 | 0                                                                         |
+|  46 | no_branch_jump                  | <class 'str'> |     55 | 0                                                                         |
+|  47 | no_load_store                   | <class 'str'> |     54 | 0                                                                         |
+|  48 | no_csr_instr                    | <class 'str'> |     53 | 0                                                                         |
+|  49 | no_ebreak                       | <class 'str'> |     50 | 1                                                                         |
+|  50 | no_dret                         | <class 'str'> |     48 | 1                                                                         |
+|  51 | no_fence                        | <class 'str'> |     49 | 1                                                                         |
+|  52 | no_wfi                          | <class 'str'> |     47 | 1                                                                         |
+|  53 | enable_unaligned_load_store     | <class 'str'> |     68 | 0                                                                         |
+|  54 | illegal_instr_ratio             | <class 'str'> |     60 | 0                                                                         |
+|  55 | hint_instr_ratio                | <class 'str'> |     57 | 0                                                                         |
+|  56 | num_of_harts                    | <class 'str'> |     53 | 1                                                                         |
+|  57 | fix_sp                          | <class 'str'> |     47 | 0                                                                         |
+|  58 | use_push_data_section           | <class 'str'> |     62 | 0                                                                         |
+|  59 | boot_mode_opts                  | <class 'str'> |     55 |                                                                           |
+|  60 | enable_page_table_exception     | <class 'str'> |     68 | 0                                                                         |
+|  61 | no_directed_instr               | <class 'str'> |     58 | 0                                                                         |
+|  62 | asm_test_suffix                 | <class 'str'> |     56 |                                                                           |
+|  63 | enable_interrupt                | <class 'str'> |     57 | 0                                                                         |
+|  64 | enable_nested_interrupt         | <class 'str'> |     64 | 0                                                                         |
+|  65 | enable_timer_irq                | <class 'str'> |     57 | 0                                                                         |
+|  66 | bare_program_mode               | <class 'str'> |     58 | 0                                                                         |
+|  67 | enable_illegal_csr_instruction  | <class 'str'> |     71 | 0                                                                         |
+|  68 | enable_access_invalid_csr_level | <class 'str'> |     72 | 0                                                                         |
+|  69 | enable_misaligned_instr         | <class 'str'> |     64 | 0                                                                         |
+|  70 | enable_dummy_csr_write          | <class 'str'> |     63 | 0                                                                         |
+|  71 | randomize_csr                   | <class 'str'> |     54 | 0                                                                         |
+|  72 | allow_sfence_exception          | <class 'str'> |     63 | 0                                                                         |
+|  73 | no_delegation                   | <class 'str'> |     54 | 1                                                                         |
+|  74 | force_m_delegation              | <class 'str'> |     59 | 0                                                                         |
+|  75 | force_s_delegation              | <class 'str'> |     59 | 0                                                                         |
+|  76 | support_supervisor_mode         | <class 'str'> |     64 | 0                                                                         |
+|  77 | disable_compressed_instr        | <class 'str'> |     65 | 0                                                                         |
+|  78 | require_signature_addr          | <class 'str'> |     63 | 0                                                                         |
+|  79 | signature_addr                  | <class 'str'> |     55 | 3735928559                                                                |
+|  80 | gen_debug_section               | <class 'str'> |     58 | 0                                                                         |
+|  81 | enable_ebreak_in_debug_rom      | <class 'str'> |     67 | 0                                                                         |
+|  82 | set_dcsr_ebreak                 | <class 'str'> |     56 | 0                                                                         |
+|  83 | num_debug_sub_program           | <class 'str'> |     62 | 0                                                                         |
+|  84 | enable_debug_single_step        | <class 'str'> |     65 | 0                                                                         |
+|  85 | single_step_iterations          | <class 'str'> |     63 | 1447206559                                                                |
+|  86 | set_mstatus_tw                  | <class 'str'> |     55 | 0                                                                         |
+|  87 | set_mstatus_mprv                | <class 'str'> |     57 | 0                                                                         |
+|  88 | min_stack_len_per_program       | <class 'str'> |     66 | 8                                                                         |
+|  89 | max_stack_len_per_program       | <class 'str'> |     66 | 64                                                                        |
+|  90 | max_branch_step                 | <class 'str'> |     56 | 20                                                                        |
+|  91 | reserved_regs                   | <class 'str'> |     54 | [29, 25, 30]                                                              |
+|  92 | enable_floating_point           | <class 'str'> |     62 | 0                                                                         |
+|  93 | enable_vector_extension         | <class 'str'> |     64 | 0                                                                         |
+|  94 | vector_instr_only               | <class 'str'> |     58 | 0                                                                         |
+|  95 | enable_b_extension              | <class 'str'> |     59 | 0                                                                         |
+|  96 | enable_bitmanip_groups          | <class 'str'> |     63 | ['ZBB', 'ZBS', 'ZBP', 'ZBE', 'ZBF', 'ZBC', 'ZBR', 'ZBM', 'ZBT', 'ZB_TMP'] |
+|  97 | dist_control_mode               | <class 'str'> |     58 | 0                                                                         |
+|  98 | category_dist                   | <class 'str'> |     54 | {}                                                                        |
+|  99 | march_isa                       | <class 'str'> |     50 | []                                                                        |
+| 100 | supported_interrupt_mode        | <class 'str'> |     65 | [0, 1]                                                                    |
+| 101 | XLEN                            | <class 'str'> |     45 | 32                                                                        |
+| 102 | SATP_MODE                       | <class 'str'> |     50 | 0                                                                         |
+| 103 | init_privil_mode                | <class 'str'> |     57 | 3                                                                         |
+| 104 | tvec_ceil                       | <class 'str'> |     50 | 4                                                                         |
++-----+---------------------------------+---------------+--------+---------------------------------------------------------------------------+
+2026-08-07 15:41:13,028 riscv_asm_program_gen.py 1127 INFO Adding directed instruction stream:riscv_llm_bpu_capacity_pressure_stream ratio:20/1000
+2026-08-07 15:41:13,028 riscv_instr_base_test.py 70 INFO All directed instruction is applied
+2026-08-07 15:41:13,028 riscv_asm_program_gen.py 611 INFO Generating privileged mode routing for MACHINE_MODE
+2026-08-07 15:41:13,038 riscv_privileged_common_seq.py 139 INFO self.mstatus_val: 0x1800
+2026-08-07 15:41:13,077 riscv_asm_program_gen.py 1161 INFO Insert directed instr stream riscv_llm_bpu_capacity_pressure_stream 5/259 times
+2026-08-07 15:41:16,152 riscv_instr_sequence.py 75 INFO Start generating 259 instruction
+2026-08-07 15:41:18,203 riscv_instr_sequence.py 85 INFO Finishing instruction generation
+2026-08-07 15:41:18,203 riscv_asm_program_gen.py 248 INFO Randomizing call stack..done
+2026-08-07 15:41:18,207 riscv_instr_sequence.py 188 INFO Processing branch instruction[616]:bne         a2, tp, 1076 # 0 -> 19
+2026-08-07 15:41:18,207 riscv_instr_sequence.py 188 INFO Processing branch instruction[619]:beq         s4, a5, -68 # 3 -> 11
+2026-08-07 15:41:18,207 riscv_instr_sequence.py 188 INFO Processing branch instruction[625]:bne         a0, a5, -807 # 9 -> 12
+2026-08-07 15:41:18,207 riscv_instr_sequence.py 188 INFO Processing branch instruction[631]:bge         tp, zero, -1510 # 15 -> 30
+2026-08-07 15:41:18,207 riscv_instr_sequence.py 188 INFO Processing branch instruction[634]:beq         zero, s10, -584 # 18 -> 24
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[638]:beq         s1, a2, 495 # 22 -> 34
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[639]:bge         zero, s0, -1680 # 23 -> 39
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[644]:c.beqz      a3, -2 # 28 -> 47
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[646]:bne         a6, s1, -1695 # 30 -> 38
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[647]:c.beqz      a4, -2 # 31 -> 51
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[649]:c.bnez      a0, 2 # 33 -> 40
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[657]:blt         s10, zero, 1774 # 41 -> 50
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[664]:c.beqz      a3, -2 # 48 -> 52
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[708]:bgeu        a4, t4, -687 # 92 -> 102
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[716]:bne         s10, t4, 1561 # 100 -> 109
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[727]:beq         s3, a3, -1823 # 111 -> 118
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[735]:bge         tp, s2, -999 # 119 -> 127
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[737]:blt         s2, s3, 1250 # 121 -> 138
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[738]:bne         ra, a5, -861 # 122 -> 136
+2026-08-07 15:41:18,208 riscv_instr_sequence.py 188 INFO Processing branch instruction[740]:bge         a0, a0, -1643 # 124 -> 135
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[742]:blt         a4, t4, -1050 # 126 -> 129
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[754]:bge         s5, t3, 536 # 138 -> 152
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[755]:beq         s1, s10, -278 # 139 -> 141
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[758]:bltu        tp, a4, -1360 # 142 -> 159
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[766]:bne         t2, sp, -530 # 150 -> 155
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[776]:bgeu        s1, t2, 554 # 160 -> 163
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[780]:bgeu        a3, a2, 1459 # 164 -> 183
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[791]:c.beqz      a3, -2 # 175 -> 188
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[792]:bne         s3, t6, 669 # 176 -> 180
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[801]:bne         s6, a1, -417 # 185 -> 192
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[803]:blt         s3, s1, 139 # 187 -> 190
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[804]:blt         zero, t1, 238 # 188 -> 195
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[808]:bne         s11, s6, -1894 # 192 -> 201
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[809]:bltu        a2, a1, -1870 # 193 -> 205
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[811]:blt         a1, a3, 1970 # 195 -> 211
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[812]:beq         gp, t6, 496 # 196 -> 210
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[817]:bge         t4, s3, -1468 # 201 -> 204
+2026-08-07 15:41:18,209 riscv_instr_sequence.py 188 INFO Processing branch instruction[818]:c.beqz      a3, -2 # 202 -> 212
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[978]:blt         a5, s4, 742 # 208 -> 214
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[987]:c.bnez      a3, 16 # 217 -> 225
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[994]:bgeu        s2, s3, 680 # 224 -> 231
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[1004]:c.beqz      a3, 32 # 234 -> 238
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[1005]:beq         a6, s0, 1757 # 235 -> 243
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[1018]:bgeu        s4, s9, 1748 # 248 -> 258
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[1019]:bne         t5, s5, -1559 # 249 -> 258
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 188 INFO Processing branch instruction[1024]:bltu        s3, s9, 725 # 254 -> 258
+2026-08-07 15:41:18,210 riscv_instr_sequence.py 201 INFO Finished post-processing instructions
+2026-08-07 15:41:18,210 riscv_asm_program_gen.py 117 INFO Post-processing main program...done
+2026-08-07 15:41:18,228 riscv_instr_sequence.py 291 INFO Injecting 0 illegal instructions, ratio 0/100
+2026-08-07 15:41:18,228 riscv_instr_sequence.py 303 INFO Injecting 0 HINT instructions, ratio 0/100
+2026-08-07 15:41:18,228 riscv_asm_program_gen.py 119 INFO Generating main program instruction stream...done
+2026-08-07 15:41:18,228 riscv_asm_program_gen.py 134 INFO Main/sub program generation...done
+2026-08-07 15:41:18,229 riscv_data_page_gen.py 57 INFO Generate data section: region_0 size:0x4096 xwr:0x8
+2026-08-07 15:41:18,230 riscv_data_page_gen.py 57 INFO Generate data section: region_1 size:0x4096 xwr:0x8
+2026-08-07 15:41:18,232 riscv_data_page_gen.py 57 INFO Generate data section: s_region_0 size:0x4096 xwr:0x8
+2026-08-07 15:41:18,233 riscv_data_page_gen.py 57 INFO Generate data section: s_region_1 size:0x4096 xwr:0x8
+2026-08-07 15:41:18,235 riscv_asm_program_gen.py 1063 INFO llm_generated/bpu_pressure/out/asm_test/riscv_llm_bpu_capacity_pressure_test_0.S is generated
+2026-08-07 15:41:18,235 riscv_instr_base_test.py 73 INFO TEST GENERATED USING SEED VALUE = 123
+2026-08-07 15:41:18,235 riscv_instr_base_test.py 74 INFO TEST GENERATION DONE
+2026-08-07 15:41:18,243 riscv_instr_base_test.py 90 INFO Total execution time: 5s

@@ -1,0 +1,25 @@
+pattern: riscv_llm_bpu_capacity_pressure_stream
+generation_mode: architecture_independent
+target: rv32imc
+seed: 123
+status: PASS
+evidence:
+  direct_smoke_instruction_count: 154
+  generated_asm: llm_generated/bpu_pressure/out/asm_test/riscv_llm_bpu_capacity_pressure_test_0.S
+  directed_stream_blocks: 5
+  conditional_branches: 320
+  control_flow_sites: 385
+  unique_targets: 365
+  call_return_pairs: 20
+  all_explicit_targets_resolve: true
+  all_blocks_terminate: true
+  taken_branches: 195
+  not_taken_branches: 125
+claim_scope:
+  proves:
+  - architecture-independent BPU pressure stimulus was generated
+  - configured branch/target/call-return thresholds were met in final assembly
+  does_not_prove:
+  - physical DUT BPU occupancy
+  - prediction accuracy
+  - entry replacement

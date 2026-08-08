@@ -1,0 +1,24 @@
+pattern: riscv_llm_alu_raw_stream
+entry_class: riscv_llm_alu_raw_stream
+approved_roots:
+  - riscv_instr_stream
+  - riscv_rand_instr_stream
+  - riscv_directed_instr_stream
+  - riscv_mem_access_stream
+classes:
+  - name: riscv_llm_dependency_stream_base
+    module: pygen_src.llm_patterns.riscv_llm_dependency_stream_base
+    role: generated_base
+    extends: riscv_directed_instr_stream
+    responsibilities:
+      - select non-reserved registers
+      - construct dependency chains
+    register: false
+  - name: riscv_llm_alu_raw_stream
+    module: pygen_src.llm_patterns.riscv_llm_alu_raw_stream
+    role: concrete_stream
+    extends: riscv_llm_dependency_stream_base
+    responsibilities:
+      - select integer arithmetic instructions
+      - emit ALU RAW dependency chains
+    register: true

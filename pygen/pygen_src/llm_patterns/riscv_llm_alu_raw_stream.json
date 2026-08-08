@@ -1,0 +1,5 @@
+{
+  "sequence_count_min": 4,
+  "sequence_count_max": 8,
+  "allowed_instructions": ["ADD", "SUB", "XOR", "OR", "AND"]
+}

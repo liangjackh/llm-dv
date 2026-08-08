@@ -1,0 +1,50 @@
+schema_version: 1
+generation_mode: architecture_independent
+name: riscv_llm_same_address_raw_stream
+description: Generate a store followed by a load from the same address.
+intent:
+  raw: Generate a store followed by a load from the same address.
+  profile: memory_same_address_raw
+  interpretation: Preserve one effective address across each store/load pair.
+base_class: riscv_mem_access_stream
+target:
+  pygen_target: rv32imc
+  xlen: [32, 64]
+  required_extensions: [I]
+  privilege_modes: [MACHINE_MODE]
+sequence:
+  semantics: Each store is followed by a load from the same base register and offset.
+parameters:
+  sequence_count: {min: 4, max: 10}
+  dependency_distance: {min: 0, max: 2}
+  access_sizes: [word]
+  aligned_access: true
+runtime:
+  insertion_ratio: 20
+  instruction_count: 500
+  iterations: 1
+  seed: 123
+acceptance:
+  kind: store-load-same-address
+  minimum_matches: 4
+  maximum_distance: 2
+
+  claim_limit: Assembly proves the requested instruction relationship, not DUT behavior.
+constraints:
+  forbidden_registers: [ZERO, cfg.reserved_regs]
+  forbidden_instructions: []
+  forbidden_addresses: []
+assumptions: []
+unresolved: []
+deferred: []
+field_sources:
+  intent.raw: user_provided
+  target: user_provided
+  parameters: user_provided
+  constraints.forbidden_registers: repository_inferred
+  runtime: user_provided
+  acceptance: user_provided
+review:
+  status: ready
+  blocking: false
+  reason: All generator-level fields and assembly checks are specified.

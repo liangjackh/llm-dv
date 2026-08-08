@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "module": "pygen_src.llm_patterns.riscv_llm_alu_raw_stream",
+  "class_name": "riscv_llm_alu_raw_stream",
+  "target": "rv32imc",
+  "seed": 123,
+  "instruction_count": 4,
+  "assembly": [
+    "add         a3, s2, s4 #start riscv_llm_alu_raw_stream",
+    "add         t1, a3, t0",
+    "add         a5, t1, t3",
+    "add         ra, a5, a2 #end riscv_llm_alu_raw_stream"
+  ]
+}

@@ -1,0 +1,10 @@
+digraph riscv_dv_flow {
+ graph [rankdir=TB,bgcolor="#F6F9FE",pad="0.35",nodesep="0.42",ranksep="0.75",fontname="Noto Sans CJK SC",label="riscv-dv / pygen 指令生成与验证流程\n传统 DV 工具链：配置 → 激励 → 执行 → 检查 → 反馈",labelloc=t,fontsize=27,fontcolor="#17324F"];
+ node [shape=box,style="rounded,filled",fillcolor=white,color="#83A3C4",penwidth=1.8,fontname="Noto Sans CJK SC",fontsize=16,fontcolor="#17324F",margin="0.20,0.14"];
+ edge [color="#416A9D",penwidth=2.2,arrowsize=0.8,fontname="Noto Sans CJK SC",fontsize=13,fontcolor="#49657F"];
+ subgraph cluster_gen {label="① 激励生成层";color="#B8D1EC";fillcolor="#EAF3FF";style="rounded,filled";fontsize=18;fontcolor="#28547C";
+  input[label="验证输入\nTarget / ISA / XLEN\ntestlist / seed / gen_opts"];run[label="run.py 调度\n解析测试与仿真器配置\n组织生成批次"];pygen[label="pygen 随机化\nISA 合法约束\n寄存器 / 指令 / 地址随机化"];directed[label="Directed Stream\n定向场景插入\n原子序列与控制流后处理"];asm[label="汇编程序生成\n初始化 / 主程序 / 子程序\n输出 RISC-V .S"];{rank=same;input run pygen}{rank=same;directed asm} input->run->pygen->directed->asm;}
+ subgraph cluster_exec {label="② 执行与检查层";color="#B8DCCB";fillcolor="#ECF8F3";style="rounded,filled";fontsize=18;fontcolor="#286852";
+  gcc[label="GCC 编译\n汇编 → ELF / binary\n检查语法与链接"];sim[label="ISS / RTL 仿真\n执行生成程序\n采集 trace / signature"];compare[label="结果比对\nISS ↔ RTL 差分\n错误定位与日志"];regression[label="覆盖率与回归\nCoverage / regression\n调整配置再次生成"];{rank=same;gcc sim}{rank=same;compare regression} gcc->sim->compare->regression;}
+ asm->gcc;regression->input[label="反馈：约束 / 配置 / seed",style=dashed,color="#3C9A78",constraint=false];
+}

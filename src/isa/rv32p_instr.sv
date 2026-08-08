@@ -1,0 +1,146 @@
+/*
+ * Copyright 2026 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// RV32P instructions (core subset of the RISC-V "P" Packed-SIMD/DSP
+// extension draft). These operate on packed byte/halfword elements within
+// a single XLEN-wide register and are width-independent, so (as with
+// RV32B/RV64B) they are also included when targeting RV64.
+
+// Basic Packed Add
+`DEFINE_P_INSTR(PADD_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PADD_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Saturating Add
+`DEFINE_P_INSTR(PSADD_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PSADD_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(SADD,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Saturating Add Unsigned
+`DEFINE_P_INSTR(PSADDU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PSADDU_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(SADDU,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Basic Packed Subtract
+`DEFINE_P_INSTR(PSUB_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PSUB_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Saturating Subtract
+`DEFINE_P_INSTR(PSSUB_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PSSUB_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(SSUB,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Saturating Subtract Unsigned
+`DEFINE_P_INSTR(PSSUBU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PSSUBU_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(SSUBU,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Averaging Add
+`DEFINE_P_INSTR(PAADD_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PAADD_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(AADD,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Averaging Add Unsigned
+`DEFINE_P_INSTR(PAADDU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PAADDU_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(AADDU,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Averaging Subtract
+`DEFINE_P_INSTR(PASUB_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PASUB_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(ASUB,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Averaging Subtract Unsigned
+`DEFINE_P_INSTR(PASUBU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PASUBU_H, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(ASUBU,    R_FORMAT, ARITHMETIC, RV32P)
+
+// Absolute Difference (no word-wide variant)
+`DEFINE_P_INSTR(PABD_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PABD_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Absolute Difference Unsigned (no word-wide variant)
+`DEFINE_P_INSTR(PABDU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PABDU_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Minimum
+`DEFINE_P_INSTR(PMIN_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PMIN_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Minimum Unsigned
+`DEFINE_P_INSTR(PMINU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PMINU_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Maximum
+`DEFINE_P_INSTR(PMAX_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PMAX_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Maximum Unsigned
+`DEFINE_P_INSTR(PMAXU_B, R_FORMAT, ARITHMETIC, RV32P)
+`DEFINE_P_INSTR(PMAXU_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Compare Equal
+`DEFINE_P_INSTR(PMSEQ_B, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(PMSEQ_H, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(MSEQ,    R_FORMAT, COMPARE, RV32P)
+
+// Compare Less Than
+`DEFINE_P_INSTR(PMSLT_B, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(PMSLT_H, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(MSLT,    R_FORMAT, COMPARE, RV32P)
+
+// Compare Less Than Unsigned
+`DEFINE_P_INSTR(PMSLTU_B, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(PMSLTU_H, R_FORMAT, COMPARE, RV32P)
+`DEFINE_P_INSTR(MSLTU,    R_FORMAT, COMPARE, RV32P)
+
+// Shift Left Logical (register shift amount)
+`DEFINE_P_INSTR(PSLL_BS, R_FORMAT, SHIFT, RV32P)
+`DEFINE_P_INSTR(PSLL_HS, R_FORMAT, SHIFT, RV32P)
+
+// Shift Right Logical (register shift amount)
+`DEFINE_P_INSTR(PSRL_BS, R_FORMAT, SHIFT, RV32P)
+`DEFINE_P_INSTR(PSRL_HS, R_FORMAT, SHIFT, RV32P)
+
+// Shift Right Arithmetic (register shift amount)
+`DEFINE_P_INSTR(PSRA_BS, R_FORMAT, SHIFT, RV32P)
+`DEFINE_P_INSTR(PSRA_HS, R_FORMAT, SHIFT, RV32P)
+
+// Shift Left Logical Immediate
+`DEFINE_P_INSTR(PSLLI_B, I_FORMAT, SHIFT, RV32P, UIMM)
+`DEFINE_P_INSTR(PSLLI_H, I_FORMAT, SHIFT, RV32P, UIMM)
+
+// Shift Right Logical Immediate
+`DEFINE_P_INSTR(PSRLI_B, I_FORMAT, SHIFT, RV32P, UIMM)
+`DEFINE_P_INSTR(PSRLI_H, I_FORMAT, SHIFT, RV32P, UIMM)
+
+// Shift Right Arithmetic Immediate
+`DEFINE_P_INSTR(PSRAI_B, I_FORMAT, SHIFT, RV32P, UIMM)
+`DEFINE_P_INSTR(PSRAI_H, I_FORMAT, SHIFT, RV32P, UIMM)
+
+// Multiply High (halfword only, no byte-wide variant)
+`DEFINE_P_INSTR(PMULH_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Multiply High Unsigned (halfword only, no byte-wide variant)
+`DEFINE_P_INSTR(PMULHU_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Multiply High Signed-Unsigned (halfword only, no byte-wide variant)
+`DEFINE_P_INSTR(PMULHSU_H, R_FORMAT, ARITHMETIC, RV32P)
+
+// Absolute Value (misc scalar, Zbb-style func7+func5 encoding)
+`DEFINE_P_INSTR(ABS, I_FORMAT, ARITHMETIC, RV32P)
+
+// Count Leading Sign Bits (misc scalar, Zbb-style func7+func5 encoding)
+`DEFINE_P_INSTR(CLS, I_FORMAT, ARITHMETIC, RV32P)

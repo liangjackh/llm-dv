@@ -1,0 +1,5 @@
+- test: riscv_llm_alu_raw_test
+  description: Generate a randomized integer ALU RAW dependency chain.
+  gen_test: riscv_instr_base_test
+  iterations: 1
+  gen_opts: +instr_cnt=200 +num_of_sub_program=0 +directed_instr_0=riscv_llm_alu_raw_stream,20

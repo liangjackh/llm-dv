@@ -1,0 +1,17 @@
+name: riscv_llm_alu_raw_stream
+description: Generate a randomized integer ALU RAW dependency chain.
+base_class: riscv_directed_instr_stream
+target:
+  xlen: [32, 64]
+  required_extensions: [I]
+parameters:
+  sequence_count: {min: 4, max: 8}
+  allowed_instructions: [ADD, SUB, XOR, OR, AND]
+runtime:
+  insertion_ratio: 20
+  instruction_count: 200
+  iterations: 1
+  seed: 123
+acceptance:
+  kind: alu-raw-chain
+  minimum_chain_length: 4

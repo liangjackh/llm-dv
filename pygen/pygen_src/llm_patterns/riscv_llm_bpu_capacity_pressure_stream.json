@@ -1,0 +1,12 @@
+{
+  "branch_sites": 64,
+  "minimum_unique_targets": 32,
+  "call_return_pairs": 4,
+  "branch_outcomes": [
+    "taken",
+    "not_taken",
+    "taken",
+    "taken",
+    "not_taken"
+  ]
+}

@@ -1,0 +1,105 @@
+schema_version: 1
+generation_mode: architecture_independent
+name: riscv_llm_bpu_capacity_pressure_stream
+description: Generate control-flow pressure with many unique branch PCs and targets.
+intent:
+  raw: 构造一个装满 BPU 的 pattern
+  profile: bpu_capacity_pressure
+  interpretation: Exercise BTB, conditional-outcome, and safe call/return capacity
+    proxies.
+target:
+  pygen_target: rv32imc
+  xlen:
+  - 32
+  required_extensions:
+  - I
+  - M
+  - C
+  privilege_modes:
+  - MACHINE_MODE
+sequence:
+  semantics: Emit many distinct static control-flow sites with terminating paths.
+  branch_sites: 64
+  unique_targets: 32
+  branch_types:
+    conditional: true
+    direct_jump: true
+    call_return: true
+    indirect_jump: false
+  conditional_outcome_mix:
+  - taken
+  - not_taken
+parameters:
+  branch_distance:
+    min: 1
+    max: 16
+  randomize_registers: true
+  randomize_block_order: true
+  randomize_branch_distance: true
+constraints:
+  forbidden_registers:
+  - ZERO
+  - cfg.reserved_regs
+  forbidden_instructions: []
+  forbidden_addresses: []
+  preserve_control_flow: true
+  ensure_termination: true
+runtime:
+  insertion_ratio: 20
+  instruction_count: 500
+  iterations: 1
+  seed: 123
+acceptance:
+  kind: bpu-capacity-pressure
+  assembly_checks:
+    minimum_unique_branch_pcs: 64
+    minimum_unique_targets: 32
+    require_conditional_branch: true
+    require_direct_jump: true
+    require_call_return: true
+    require_terminating_path: true
+  claim_limit: Assembly proves stimulus structure, not physical BPU occupancy.
+assumptions:
+- field: sequence.branch_sites
+  value: 64
+  reason: DUT predictor capacity was not supplied; use a demo pressure scale.
+- field: sequence.branch_types
+  value: conditional+direct_jump+call_return
+  reason: BPU was not narrowed to BTB, history predictor, or RAS.
+unresolved: []
+deferred:
+- field: dut.btb_entry_count
+  required_before: dut_aware_capacity_claim
+  status: deferred
+- field: dut.bht_or_pht_entry_count
+  required_before: dut_aware_history_capacity_pattern
+  status: deferred
+- field: dut.ras_depth
+  required_before: dut_aware_ras_overflow_pattern
+  status: deferred
+- field: dut.predictor_index_function
+  required_before: dut_aware_alias_pattern
+  status: deferred
+- field: dut.predictor_update_policy
+  required_before: dut_aware_training_claim
+  status: deferred
+field_sources:
+  intent.raw: user_provided
+  target: user_provided_and_repository_inferred
+  runtime.seed: user_provided
+  sequence: domain_profile_and_llm_assumed
+  constraints: repository_inferred
+  acceptance: domain_profile
+claim_scope:
+  proves:
+  - configured control-flow stimulus structure was emitted
+  - generated control flow has a terminating path
+  does_not_prove:
+  - physical BPU occupancy
+  - prediction accuracy
+  - entry replacement
+review:
+  status: ready
+  blocking: false
+  reason: Architecture-independent generation does not require DUT microarchitecture
+    parameters.

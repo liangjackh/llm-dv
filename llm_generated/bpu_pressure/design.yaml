@@ -1,0 +1,17 @@
+pattern: riscv_llm_bpu_capacity_pressure_stream
+entry_class: riscv_llm_bpu_capacity_pressure_stream
+approved_roots:
+- riscv_instr_stream
+- riscv_rand_instr_stream
+- riscv_directed_instr_stream
+- riscv_mem_access_stream
+classes:
+- name: riscv_llm_bpu_capacity_pressure_stream
+  module: pygen_src.llm_patterns.riscv_llm_bpu_capacity_pressure_stream
+  role: concrete_stream
+  extends: riscv_directed_instr_stream
+  responsibilities:
+  - load and validate architecture-independent BPU pressure parameters
+  - emit safe labeled conditional branches and direct jumps
+  - emit terminating call and return segments with unique labels
+  register: true

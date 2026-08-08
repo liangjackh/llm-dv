@@ -1,0 +1,13 @@
+digraph ai_skill_flow {
+ graph [rankdir=TB,bgcolor="#F7F7FF",pad="0.35",nodesep="0.30",ranksep="0.55",fontname="Noto Sans CJK SC",label="AI 赋能的 RISC-V Directed Stream 自动生成流程\nLLM 将顶层验证意图转化为可执行、可验证、可汇报的 pygen pattern",labelloc=t,fontsize=27,fontcolor="#172C4A"];
+ node [shape=box,style="rounded,filled",fillcolor=white,color="#9CB1D2",penwidth=1.7,fontname="Noto Sans CJK SC",fontsize=15,fontcolor="#172C4A",margin="0.18,0.12"];
+ edge [color="#5067A8",penwidth=2.2,arrowsize=0.8,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#526783"];
+ intent[label="人的顶层验证意图\n‘构造一个装满 BPU 的 pattern’\nTarget / seed / 可选参数",fillcolor="#F1ECFF",color="#7960D7",penwidth=2.2];
+ subgraph cluster_ai {label="AI 赋能层：理解、决策、生成、验证、修复";color="#6F63D8";fillcolor="#EDEBFF";style="rounded,filled";fontsize=20;fontcolor="#4D3DB1";penwidth=2.3;
+  understand[label="① 意图理解\n识别 BPU / RAW / 访存场景\n保留用户原始描述",fillcolor="#F8F6FF",color="#806BE0"];elaborate[label="② 需求展开\n补齐约束与验收规则\nassumption / deferred / claim",fillcolor="#F3F4FF",color="#6B78DB"];design[label="③ 设计决策\n选择已有父类或生成父类\n输出可校验 design.yaml",fillcolor="#EEF6FF",color="#4F8BD8"];code[label="④ 代码与集成生成\nPython stream + 参数\nfactory + testlist",fillcolor="#EAF9FA",color="#36A3B5"];verify[label="⑤ 自动验证与修复\n逐层执行、失败分类、最小修复\n检查真实汇编并生成报告",fillcolor="#E9FAF4",color="#25A17C"];{rank=same;understand elaborate design code verify}understand->elaborate->design->code->verify;}
+ intent->understand[label="自然语言入口",penwidth=2.8,color="#6847D9"];
+ subgraph cluster_delivery {label="AI 驱动的可追溯交付链";color="#B9C9DF";fillcolor="#F7FAFE";style="rounded,filled";fontsize=18;fontcolor="#35577D";
+  req[label="requirement.yaml\narchitecture_independent\nready / deferred"];des[label="design.yaml\n继承图 / 职责 / entry class"];stream[label="Python Stream\n参数化、安全的控制/数据关系"];integrate[label="pygen 集成\nfactory / testlist / fixed seed"];assembly[label="最终汇编 .S\nPattern 真实落地"];report[label="证据报告\nPASS / FAIL / claim scope",fillcolor="#ECF9F4",color="#55A68A"];{rank=same;req des stream}{rank=same;integrate assembly report}req->des->stream->integrate->assembly->report;}
+ verify->req[label="生成资产 + 自动证据",penwidth=2.8,color="#278E83"];
+ gain[label="AI 对 DV 的核心增益\n自然语言入口 · 验证知识结构化 · 生成器代码自动构建\n工具链自动接入 · 失败定位与修复 · 证据化汇报",fillcolor="#E8F3FF",color="#6CA1D6",penwidth=2.0];future[label="未来：DUT-aware AI\n分析 RTL / 设计文档\n容量、索引、替换与更新策略\n当前 deferred，不阻塞架构无关 pattern",fillcolor="#F3EFFF",color="#9B84DC",style="rounded,filled,dashed"];{rank=same;gain future}report->gain;report->future[style=dashed,label="能力扩展"];
+}
