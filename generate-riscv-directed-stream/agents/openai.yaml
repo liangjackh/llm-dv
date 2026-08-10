@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate RISC-V Directed Stream"
+  short_description: "Generate and validate custom pygen directed streams"
+  default_prompt: "Use $generate-riscv-directed-stream to implement and test a new pygen directed instruction stream from my pattern requirements."
