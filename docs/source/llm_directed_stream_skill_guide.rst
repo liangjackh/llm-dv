@@ -4,6 +4,14 @@ LLM Directed Stream Skill 使用指南
 流程图概览
 ----------
 
+Directed Stream Skill 顶层流程：
+
+.. image:: _static/llm_end_to_end_verification_flow.svg
+   :alt: LLM Directed Stream Skill 顶层流程
+   :width: 100%
+
+该图概括从自然语言验证需求到 Directed Stream 生成、集成、验证与交付的主流程。
+
 传统 riscv-dv / pygen 工具流程：
 
 .. image:: _static/riscv_dv_tool_flow.svg
@@ -100,7 +108,6 @@ Python 语法正确就宣称 pattern 已完成。
 生成结果保留原始描述，并区分 ``field_sources``、``assumptions`` 和
 ``unresolved``。``review`` 控制后续流程：
 
-* ``ready``：需求完整，可以进入继承设计；
 * ``ready``：需求完整，或已明确采用架构无关模式，可以进入继承设计；
 * ``needs_review`` 且 ``blocking: false``：可以按明确假设生成，汇报时必须列出假设；
 * ``blocked``：缺少指令语义或汇编验收条件，不能开始生成类。
@@ -115,35 +122,25 @@ DUT 内部 BPU 已满。
 Skill 的执行流程
 ----------------
 
-一次完整执行包含以下阶段：
+顶层流程分为六个阶段：
 
-.. code-block:: text
+#. **验证需求**：用户用自然语言描述目标场景、目标 ISA、参数和预期结果。
+#. **需求结构化**：Skill 将意图整理为明确的约束、假设和验收标准；存在阻塞项时先请求确认。
+#. **生成 Directed Stream**：设计合适的继承关系，生成可配置、可复用的 Pattern。
+#. **集成并运行**：接入 pygen，配置 factory 和 testlist，使用固定 seed 生成测试。
+#. **验证与反馈**：逐层检查设计、随机化、集成和最终汇编；失败时定位并修复最小责任项。
+#. **交付验证资产**：报告生成物、运行参数、验证状态和代表性汇编证据。
 
-   自然语言需求
-       │
-       ▼
-   requirement.yaml
-       │
-       ▼
-   design.yaml（继承结构和 entry class）
-       │
-       ▼
-   Python stream 模块 + JSON/YAML 参数
-       │
-       ▼
-   design/AST/Python compile 检查
-       │
-       ▼
-   pygen import → 实例化 → randomize
-       │
-       ▼
-   注册 factory → 生成 testlist
-       │
-       ▼
-   run.py --steps gen
-       │
-       ▼
-   检查真实 .S → 输出报告
+前五个阶段对应页面顶部的流程图。验证结果不满足预期时，Skill 返回需求结构化或
+Pattern 生成阶段调整约束和方案，而不是直接扩大修改范围。
+
+关键中间资产包括：
+
+* ``requirement.yaml``：结构化需求、假设和验收条件；
+* ``design.yaml``：继承关系、职责和 entry class；
+* Python stream 与 JSON/YAML：Pattern 实现及可调参数；
+* ``testlist.yaml`` 与固定 seed：可复现运行入口；
+* 最终 ``.S`` 和检查报告：语义验收证据。
 
 继承策略
 --------
@@ -336,8 +333,7 @@ ALU RAW：
      --maximum-distance 2
 
 当前 ALU RAW 示例
-----------------------------------------;296d
-----------------------------------------
+-----------------
 仓库已包含一个完整示例：
 
 * ``llm_generated/alu_raw/requirement.yaml``：自然语言需求的结构化结果；
